@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abaixo {
+            color: brown;
+        }
+        .ideal {
+            color: blue;
+        }
+        .sobrepeso {
+            color: green;
+        }
+        .obeso {
+            color: red;
+        }
+        .morbido {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    |<script>
+        let nome = prompt('Informe o seu nome: ')
+        let peso = prompt('Informe o seu peso: ')
+        let altura = prompt('Informe o seu altura: ')
+
+        let imc = peso / (altura * altura)
+            if (imc <= 18) {
+                alert ('você está abaixo do peso ideal')
+                //document.write(nome + ', sua altura é ' + altura + ', e o seu peso é ' + peso + ', por isso seu IMC é ' + imc + ', portanto você está abaixo do peso')
+
+                document.write(` <br><span class= abaixo>${nome}</span>, sua altura é ${altura}, o seu peso é ${peso}, por isso seu IMC é ${imc}, portanto você está <b> abaixo do peso</b>`)
+            }
+            if (imc > 18.5 && imc <= 24.9) {
+                document.write(` <br><span class= ideal>${nome}</span>, sua altura é ${altura}, o seu peso é ${peso}, por isso seu IMC é ${imc}, portanto você está no <b> peso ideal</b>`)
+
+            }
+            if (imc > 24.9 && imc <= 29.9) {
+                document.write(` <br><span class= sobrepeso>${nome}</span>, sua altura é ${altura}, o seu peso é ${peso}, por isso seu IMC é ${imc}, portanto você está com <b> sobrepeso</b>`)
+            }
+            if (imc > 29.9 && imc <= 35 ) {
+                document.write(` <br><span class= obeso>${nome}</span>, sua altura é ${altura}, o seu peso é ${peso}, por isso seu IMC é ${imc}, portanto você está <b> obeso</b>`)
+            }
+            if (imc > 35) {
+                document.write(` <br><span class= morbido>${nome}</span>, sua altura é ${altura}, o seu peso é ${peso}, por isso seu IMC é ${imc}, portanto você está em <b> obesidade mórbida</b>`)
+            }
+        </script>
+</body>
+</html>
